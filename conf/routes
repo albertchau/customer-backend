@@ -1,0 +1,19 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /                                controllers.Application.index
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file                    controllers.Assets.at(path="/public", file)
+
+
+GET         /restaurant/search               controllers.CustomerController.getRestaurantsFromSearch(term: Option[String],limit: Option[Long], category_filter: Option[String], cll: Option[String], location: Option[String])
+POST        /restaurant/register/:id         controllers.CustomerController.registerForRestaurant(id: Long)
+GET         /restaurant/:id                  controllers.CustomerController.getRestaurantById(id:Long)
+
+GET         /customer/currentWaitlist        controllers.CustomerController.getCurrentWaitlist
+GET /customer/info  controllers.CustomerController.getCustomerInfo
+
+    
