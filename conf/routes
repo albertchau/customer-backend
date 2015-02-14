@@ -14,6 +14,7 @@ POST        /restaurant/register/:id         controllers.CustomerController.regi
 GET         /restaurant/:id                  controllers.CustomerController.getRestaurantById(id:Long)
 
 GET         /customer/currentWaitlist        controllers.CustomerController.getCurrentWaitlist
-GET /customer/info  controllers.CustomerController.getCustomerInfo
+GET         /customer/info                   controllers.CustomerController.getCustomerInfo
+
 
     
